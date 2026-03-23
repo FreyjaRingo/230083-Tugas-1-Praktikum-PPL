@@ -7,7 +7,7 @@ let inventory = [{ id: "1", name: "Laptop", stock: 10 }];
 app.get('/api/inventory', (req, res) => {
     res.status(200).json({ status: "OK", data: inventory, errors: null });
 });
-
+// inisiasi pull request
 app.get('/api/inventory/:id', (req, res) => {
     const item = inventory.find(i => i.id === req.params.id);
     if (!item) return res.status(404).json({ status: "ERROR", data: null, errors: ["Item not found"] });
